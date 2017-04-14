@@ -1,0 +1,31 @@
+{
+  "name": "nodemon-webpack-client-server-bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/server.js",
+  "scripts": {
+    "build": "npm run clean && npm run webpack",
+    "clean": "rm -rf ./build",
+    "dev": "node ./node_modules/nodemon/bin/nodemon.js --exec npm start --watch src --watch config",
+    "prepublish": "npm run build",
+    "prestart": "webpack -p",
+    "start": "node ./build/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joris-calvat/nodemon-webpack-client-server-bootstrap.git"
+  },
+  "author": "joris calvat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joris-calvat/nodemon-webpack-client-server-bootstrap/issues"
+  },
+  "homepage": "https://github.com/joris-calvat/nodemon-webpack-client-server-bootstrap#readme",
+  "devDependencies": {
+    "express": "^4.15.2",
+    "nodemon": "^1.11.0",
+    "webpack": "^2.4.1"
+  }
+}
